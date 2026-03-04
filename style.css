@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --color-brand: #848C6C;
+    --color-brand-hover: #585e45;
+
+    --color-bg: #FEFEFE;
+    --color-bg-white: #ffffff;
+    --color-text-main: #2A2A2A;
+    --color-text-muted: #9B9B9B;
+
+    --font-family-base: "Montserrat", sans-serif;
+
+    --font-size-xs: clamp(0.8rem, 1vw, 0.9rem);
+    --font-size-sm: clamp(0.9rem, 1.2vw, 1rem);
+    --font-size-md: clamp(1rem, 1.8vw, 1.2rem);
+    --font-size-lg: clamp(1.5rem, 3vw, 2.2rem);
+    --font-size-xl: clamp(2rem, 6vw, 4rem);
+
+    --spacing-xs: clamp(0.5rem, 1vw, 0.75rem);
+    --spacing-sm: clamp(0.75rem, 1.5vw, 1rem);
+    --spacing-md: clamp(1.25rem, 3vw, 2rem);
+    --spacing-lg: clamp(2rem, 5vw, 4rem);
+    --spacing-xl: clamp(3rem, 8vw, 6rem);
+
+}
