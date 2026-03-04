@@ -1,31 +1,48 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-:root{
-    --color-brand: #848C6C;
-    --color-brand-hover: #585e45;
+:root {
+  --color-brand: #848c6c;
+  --color-brand-hover: #585e45;
 
-    --color-bg: #FEFEFE;
-    --color-bg-white: #ffffff;
-    --color-text-main: #2A2A2A;
-    --color-text-muted: #9B9B9B;
+  --color-bg: #fefefe;
+  --color-bg-white: #ffffff;
+  --color-text-main: #2a2a2a;
+  --color-text-muted: #9b9b9b;
 
-    --font-family-base: "Montserrat", sans-serif;
+  --font-family-base: "Montserrat", sans-serif;
 
-    --font-size-xs: clamp(0.8rem, 1vw, 0.9rem);
-    --font-size-sm: clamp(0.9rem, 1.2vw, 1rem);
-    --font-size-md: clamp(1rem, 1.8vw, 1.2rem);
-    --font-size-lg: clamp(1.5rem, 3vw, 2.2rem);
-    --font-size-xl: clamp(2rem, 6vw, 4rem);
+  --font-size-xs: clamp(0.8rem, 1vw, 0.9rem);
+  --font-size-sm: clamp(0.9rem, 1.2vw, 1rem);
+  --font-size-md: clamp(1rem, 1.8vw, 1.2rem);
+  --font-size-lg: clamp(1.5rem, 3vw, 2.2rem);
+  --font-size-xl: clamp(2rem, 6vw, 4rem);
 
-    --spacing-xs: clamp(0.5rem, 1vw, 0.75rem);
-    --spacing-sm: clamp(0.75rem, 1.5vw, 1rem);
-    --spacing-md: clamp(1.25rem, 3vw, 2rem);
-    --spacing-lg: clamp(2rem, 5vw, 4rem);
-    --spacing-xl: clamp(3rem, 8vw, 6rem);
+  --spacing-xs: clamp(0.5rem, 1vw, 0.75rem);
+  --spacing-sm: clamp(0.75rem, 1.5vw, 1rem);
+  --spacing-md: clamp(1.25rem, 3vw, 2rem);
+  --spacing-lg: clamp(2rem, 5vw, 4rem);
+  --spacing-xl: clamp(3rem, 8vw, 6rem);
+}
 
+/* Estilos de FORMULARIO*/
+
+
+
+
+
+
+footer {
+  color: var(--color-bg);
+  background-color: var(--color-brand);
+  padding: var(--spacing-sm) var(--spacing-md);
+  
+}
+
+footer p{
+    font-size: var(--font-size-sm);
+    text-align: center;
 }
