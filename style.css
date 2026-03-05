@@ -29,3 +29,129 @@
     --spacing-xl: clamp(3rem, 8vw, 6rem);
 
 }
+
+/* CSS DEL PUNTO 2 */
+
+/* Estilo general de TU sección */
+.seccion-que-hacemos {
+    background-color: #fcfbf9;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título de tu sección */
+.titulo-lumea {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Subtítulo de tu sección */
+.subtitulo-lumea {
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 40px auto; 
+}
+
+/* EL CONTENEDOR GRID:  */
+.contenedor-beneficios-lumea {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* LA TARJETA INDIVIDUAL */
+.tarjeta-lumea {
+    background-color: #f4f4f2;
+    padding: 30px;
+    border-radius: 15px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; /* Empuja el botón al final */
+    transition: transform 0.3s ease; /* Para que se mueva suave al pasar el ratón */
+}
+
+.tarjeta-lumea:hover {
+    transform: translateY(-5px); 
+}
+
+.tarjeta-lumea h3 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.tarjeta-lumea p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.imagen-lumea{
+max-width: 100%; 
+    height: auto;
+    display: block;
+    margin: 0 auto 25px auto; 
+    border-radius: 10px; 
+    }
+
+
+.boton-lumea {
+    background-color: #8c9376; 
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.boton-lumea:hover {
+    background-color: #6b705c; /* Oscurece un poco al pasar el ratón */
+}
+/* =========================================
+   1. DISEÑO POR DEFECTO (MÓVILES)
+   ========================================= */
+
+.seccion-que-hacemos-lumea {
+    padding: 40px 15px; 
+}
+
+.titulo-lumea {
+    font-size: 2rem; 
+}
+
+.contenedor-tarjetas-lumea {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+@media (min-width: 768px) {
+    .contenedor-tarjetas-lumea {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .seccion-que-hacemos-lumea {
+        padding: 80px 20px;
+    }
+
+    .titulo-lumea {
+        font-size: 2.8rem; 
+    }
+
+    .contenedor-tarjetas-lumea {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
