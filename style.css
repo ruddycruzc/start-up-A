@@ -1,34 +1,142 @@
-:root{
-    --color-brand: #848C6C; /* Verde oliva INARU */
-    --color-brand-hover: #585e45;
-    --color-bg: #FEFEFE;    /*--Color de fondo--*/
-    --color-bg-white: #ffffff; 
-    --color-text-main: #2A2A2A;
-    --color-text-muted: #9B9B9B;
-    --font-family-base: "Montserrat", sans-serif;
-    --font-family-titles: "Playfair Display", serif; 
-
-    /* Tamaños de fuente fluidos */
-    --font-size-xs: clamp(0.8rem, 1vw, 0.9rem);
-    --font-size-sm: clamp(0.9rem, 1.2vw, 1rem);
-    --font-size-md: clamp(1rem, 1.8vw, 1.2rem);
-    --font-size-lg: clamp(1.5rem, 3vw, 2.2rem);
-    --font-size-xl: clamp(2rem, 6vw, 4rem);
-
-    /* Espaciados */
-    --spacing-md: clamp(1.25rem, 3vw, 2rem);
-    --spacing-lg: clamp(2rem, 5vw, 4rem);
-    --spacing-xl: clamp(3rem, 8vw, 6rem);
-
-    --radius-lg: 20px;
-    --radius-full: 100px;
-}
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+:root {
+  --color-brand: #848c6c;
+  --color-brand-hover: #585e45;
+
+  --color-bg: #fefefe;
+  --color-bg-white: #ffffff;
+  --color-text-main: #2a2a2a;
+  --color-text-muted: #9b9b9b;
+
+  --font-family-base: "Montserrat", sans-serif;
+
+  --font-size-xs: clamp(0.8rem, 1vw, 0.9rem);
+  --font-size-sm: clamp(0.9rem, 1.2vw, 1rem);
+  --font-size-md: clamp(1rem, 1.8vw, 1.2rem);
+  --font-size-lg: clamp(1.5rem, 3vw, 2.2rem);
+  --font-size-xl: clamp(2rem, 6vw, 4rem);
+
+  --spacing-xs: clamp(0.5rem, 1vw, 0.75rem);
+  --spacing-sm: clamp(0.75rem, 1.5vw, 1rem);
+  --spacing-md: clamp(1.25rem, 3vw, 2rem);
+  --spacing-lg: clamp(2rem, 5vw, 4rem);
+  --spacing-xl: clamp(3rem, 8vw, 6rem);
+}
+
+/* Estilos de FORMULARIO*/
+
+#contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("./assets/vecteezy_abstract-soft-grey-liquid-background_71804392.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: auto;
+  padding: var(--spacing-md);
+}
+#contacto h2 {
+  color: var(--color-text-main);
+  font-weight: 600;
+  text-align: center;
+}
+#contacto p {
+  color: var(--color-text-main);
+  text-align: center;
+  width: 95%;
+}
+
+fieldset {
+  display: flex;
+  border: none;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+
+  width: 300px;
+}
+
+fieldset #nombre,
+fieldset #email,
+textarea {
+  border: none;
+  border-radius: 25px;
+  padding: var(--spacing-sm);
+}
+
+textarea {
+  border: none;
+  border-radius: 20px;
+  padding: var(--spacing-sm);
+  font-family: var(--font-family-base);
+}
+
+fieldset legend,
+fieldset label {
+  display: none;
+}
+
+form {
+  margin: var(--spacing-sm) 0;
+}
+
+fieldset button {
+  border-radius: 25px;
+  border: none;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--color-brand);
+  color: var(--color-bg);
+  align-self: flex-end;
+  cursor: pointer;
+  /* transition: all 0.3s ease; */
+}
+
+fieldset button:hover {
+  background-color: var(--color-brand-hover);
+}
+
+fieldset button:focus {
+  outline: 2px solid var(--color-brand-hover);
+  outline-offset: 2px;
+  background-color: var(--color-brand-hover);
+}
+
+footer {
+  color: var(--color-bg);
+  background-color: var(--color-brand);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+footer p {
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+@media (min-width: 1400px) {
+  fieldset {
+    width: 600px;
+  }
+  footer p {
+    font-size: var(--font-size-md);
+  }
+
+  #contacto h2 {
+    font-size: var(--font-size-lg);
+  }
+  #contacto p {
+    font-size: var(--font-size-md);
+  }
+
+  fieldset button {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
 
 body {
     background-color: var(--color-bg);
