@@ -43,61 +43,130 @@
         text-align: center;
     }
 
-    h3{
-        font-size: var(--font-size-md);
-        font-weight: var(--font-weight-bold)
-    }
-.section-subtitle{
+}
+
+/* CSS DEL PUNTO 2 */
+
+/* Estilo general de TU sección */
+.seccion-que-hacemos {
+    background-color: #fcfbf9;
+    padding: 60px 20px;
     text-align: center;
-    font-size: var(--font-size-md)
-
-
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-/* --- SECCIÓN SOBRE NOSOTROS --- */
 
-.team-grid {
+/* Título de tu sección */
+.titulo-lumea {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Subtítulo de tu sección */
+.subtitulo-lumea {
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 40px auto; 
+}
+
+/* EL CONTENEDOR GRID:  */
+.contenedor-beneficios-lumea {
     display: grid;
-    /* Esto los pone en 3 columnas iguales (una sola fila) */
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 30px;
-    margin-top: var(--spacing-lg);
-    padding: 0 var(--spacing-md);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.team-card {
-    background-color: var(--color-bg-white);
+/* LA TARJETA INDIVIDUAL */
+.tarjeta-lumea {
+    background-color: #f4f4f2;
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 15px; 
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra el contenido de la tarjeta */
+    flex-direction: column; 
+    justify-content: space-between; /* Empuja el botón al final */
+    transition: transform 0.3s ease; /* Para que se mueva suave al pasar el ratón */
 }
 
-/* Ajustes para fotos circulares perfectas */
-.team-img-wrapper {
-    width: 150px;  /* Tamaño fijo para el círculo */
-    height: 150px; /* Tamaño fijo para el círculo */
-    border-radius: 50%; /* Hace el contenedor circular */
-    overflow: hidden;   /* Corta la imagen sobrante */
-    margin-bottom: var(--spacing-sm);
+.tarjeta-lumea:hover {
+    transform: translateY(-5px); 
 }
 
-.team-img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Evita que la foto se estire */
+.tarjeta-lumea h3 {
+    margin-bottom: 15px;
+    color: #222;
 }
 
-.role {
-    font-size: var(--font-size-xs);
-    color: var(--color-brand);
-    font-weight: 500;
-    margin-top: 5px;
+.tarjeta-lumea p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
 }
 
-/* Responsive: En móviles se ponen uno debajo de otro */
-@media (max-width: 768px) {
-    .team-grid {
-        grid-template-columns: 1fr;
+.imagen-lumea{
+max-width: 100%; 
+    height: auto;
+    display: block;
+    margin: 0 auto 25px auto; 
+    border-radius: 10px; 
+    }
+
+
+.boton-lumea {
+    background-color: #8c9376; 
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.boton-lumea:hover {
+    background-color: #6b705c; /* Oscurece un poco al pasar el ratón */
+}
+/* =========================================
+   1. DISEÑO POR DEFECTO (MÓVILES)
+   ========================================= */
+
+.seccion-que-hacemos-lumea {
+    padding: 40px 15px; 
+}
+
+.titulo-lumea {
+    font-size: 2rem; 
+}
+
+.contenedor-tarjetas-lumea {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+@media (min-width: 768px) {
+    .contenedor-tarjetas-lumea {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .seccion-que-hacemos-lumea {
+        padding: 80px 20px;
+    }
+
+    .titulo-lumea {
+        font-size: 2.8rem; 
+    }
+
+    .contenedor-tarjetas-lumea {
+        grid-template-columns: repeat(3, 1fr); 
     }
 }
