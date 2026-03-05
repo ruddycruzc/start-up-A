@@ -1,59 +1,74 @@
 <!DOCTYPE html>
-<html lang="en" <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-    INARU Beauty
-</title>
-<meta name="description" content="Cosmética ecológica inspirada en rituales japoneses.">
-<link rel="stylesheet" href="style.css">
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        INARU Beauty | Cosmética Japonesa Ecológica
+    </title>
+    <meta name="description" content="Cosmética ecológica inspirada en rituales japoneses.">
+    <link rel="stylesheet" href="style.css">
 </head>
 
+
+
 <body>
-    <!-- ===== NAVBAR ===== -->
 
-
-    <header class="hero" role="banner">
-
-
-
+    <header>
         <nav class="navbar" aria-label="Navegación principal">
+            <a href="index.html" class="logo"><!--TENEMOS QUE PONER LA DIRECCION CORRECTA DE LA IMAGEN-->
+                <img src="img/logo.png" alt="INARU Beauty">
+            </a>
 
+            <!--BOTON HAMBURGUESA-->
+            <button type="button" id="hamburger" aria-label="Abrir menu" aria-controls="nav-list" aria-expanded="false">
 
-            <a href="#" class="logo">INARU</a>
-
-            <!-- Botón hamburguesa accesible -->
-
-            <button type="button" id="hamburger" aria-label="Abrir menú" aria-controls="menu" aria-expanded="false">
-                ☰
+                ☰ <!--Los atributos aria hacen el menu accesible-->
             </button>
 
 
-            <!--IMG DECORATIVA DE FONDO AÑADIREMOS EN CSS-->
 
-            <div class="hero-content">
-
-                <span class="hero-brand">INARU</span>
-
-                <h1> <!--TITULO DE LA PAGINA-->
-                    Ritual japonés
-                </h1>
-
-                <p class="hero-subtitle"> <!--MISION CLARA-->
-                    En INARU creamos cosmética ecológica inspirada en Japón,
-                    elaborada con ingredientes naturales y rituales que cuidan
-                    tu piel y honran la armonía del planeta.
-
-                </p>
+            <ul class="nav-links" id="nav-list">
+                <li>
+                    <a href="#inicio">Inicio</a> <!--"#" es porque no tenemos aun los enlaces creados-->
+                </li>
+                <li>
+                    <a href="#que-hacemos">¿Qué hacemos?</a>
+                </li>
+                <li>
+                    <a href="#sobre-nosotros">Sobre nosotros</a>
+                </li>
+                <li>
+                    <a href="#unete">Únete</a>
+                </li>
 
 
+            </ul>
 
-            </div>
-
-            <div class="hero-image">
-                <img src="img/productos.png" alt="Productos cosméticos INARU sobre piedras naturales">
-            </div>
-
+        </nav>
     </header>
+
+
+
+
+    <main>
+        <section class="hero" id="inicio">
+
+            <span class="brand-name">INARU</span>
+
+            <h1> Ritual japonés</h1>
+
+            <p class="description"> <!--Descripción de nuestro contenido-->
+
+                En Inaru creamos cosmética ecológica inspirada en Japón, elaborada con ingredientes naturales y
+                rituales que cuidan tu piel y honran la armonía del planeta.
+            </p>
+
+            <a href="#unete" class="button-hero">Descubrir más</a>
+
+
+
 
     <section class="seccion-que-hacemos">
         <h2 class="titulo-lumea">Elige LUMEA</h2>
@@ -97,73 +112,116 @@
                 <a href="#" class="boton-lumea">Nuestra promesa de diversidad </a>
             </div>
 
-        </div>
-    </section>
+        </section>
 
-    <section class="team">
+
+    <section class="team-section">
         <div class="team-container">
-            <h2 class="section-title">Nuestro equipo</h2>
-            <p class="section-subtitle">El corazón detrás de nuestra misión</p>
+            <h2 class="section-title">Sobre nosotros</h2>
+            <p class="section-subtitle">Un equipo que combina tradición japonesa, ciencia y cuidado auténtico.</p>
 
+
+
+        <section class="equipo" id="sobre-nosotros">
+
+            <h2>
+                Sobre nosotros
+            </h2>
+            <p class="subtitle">
+                Un equipo que combina tradición japonesa, ciencia y cuidado auténtico
+            </p>
             <div class="team-grid">
+                <figure>
+                    <img src="img/aiko.png" alt="Aiko Tanaka">
+                    <figcaption><strong>Aiko Tanaka</strong><br>Fundadora</figcaption>
+                </figure>
 
                 <div class="team-card">
                     <div class="team-img-wrapper">
-                        <img src="foto1.jpg" alt="Carla Ruiz - Directora ejecutiva">
+                        <img src="foto1.jpg" alt="Aiko Tanaka - Fundadora Especialista en rituales">
                     </div>
                     <div class="info">
-                        <h3>Carla Ruiz</h3>
-                        <p class="role">Directora ejecutiva</p>
+                        <h3>Aiko Tanaka</h3>
+                        <p class="role">Fundadora Especialista en rituales</p>
                     </div>
                 </div>
 
                 <div class="team-card">
                     <div class="team-img-wrapper">
-                        <img src="foto2.jpg" alt="Pedro Pérez - Gerente comercial">
+                        <img src="foto2.jpg" alt="Marina Lopez - Directora de Producto">
                     </div>
                     <div class="info">
-                        <h3>Pedro Pérez</h3>
-                        <p class="role">Gerente Comercial</p>
+                        <h3>Marina Lopez</h3>
+                        <p class="role">Directora de Producto - Química cosmética natural</p>
                     </div>
                 </div>
 
                 <div class="team-card">
                     <div class="team-img-wrapper">
-                        <img src="foto3.jpg" alt="Ana García - Asesora de Belleza">
+                        <img src="foto3.jpg" alt="Dr. Kenji Sato - Asesor cientifico">
                     </div>
                     <div class="info">
-                        <h3>Ana García</h3>
-                        <p class="role">Asesora de Belleza</p>
+                        <h3>Dr. Kenji Sato</h3>
+                        <p class="role">Dr. Kenji Sato - Dermatólogo - Asesor científico</p>
                     </div>
                 </div>
 
             </div>
-        </div>
-    </section>
+        </section>
+
+
+
+
 
     <section id="contacto">
-        <h2>Únete</h2>
+        <h2>Te unes?</h2>
 
-        <p class="form-help">Recibe novedades y promociones exclusivas.</p>
+        <p class="form-help">Forma parte de ritual y recibe contenido exclusivo</p>
 
-        <form>
-            <fieldset>
-                <legend>Suscripción</legend>
+
 
                 <label for="nombre">Nombre </label>
-                <input type="text" id="nombre" name="nombre" autocomplete="name" required />
+                <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Nombre" />
+        <section class="unete-section" id="unete">
+            <h2>¿Te unes?</h2>
+            <p class="form-help">Forma parte del ritual y recibe contenido exclusivo</p>
+
+            <form class=subscribe>
+
+
+
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" autocomplete="email" required />
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="Correo electrónico" />
+                
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="message" rows="4" placeholder="Escribe un mensaje..."></textarea>
+
+                <textarea placeholder="Escribe un mensaje..."></textarea>
 
                 <button type="submit" aria-label="Enviar formulario de suscripción">
                     Quiero unirme
+
                 </button>
             </fieldset>
         </form>
     </section>
+   
+
+
+
+
+    </main>
+
+    <footer class="footer-site">
+        <p> © 2026 INARU Beauty — Todos los derechos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+
 
 </body>
-
 
 </html>
