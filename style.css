@@ -1,1 +1,120 @@
+:root{
+    --color-brand: #848C6C; /* Verde oliva INARU */
+    --color-brand-hover: #585e45;
+    --color-bg: #FEFEFE;    /*--Color de fondo--*/
+    --color-bg-white: #ffffff; 
+    --color-text-main: #2A2A2A;
+    --color-text-muted: #9B9B9B;
+    --font-family-base: "Montserrat", sans-serif;
+    --font-family-titles: "Playfair Display", serif; 
 
+    /* Tamaños de fuente fluidos */
+    --font-size-xs: clamp(0.8rem, 1vw, 0.9rem);
+    --font-size-sm: clamp(0.9rem, 1.2vw, 1rem);
+    --font-size-md: clamp(1rem, 1.8vw, 1.2rem);
+    --font-size-lg: clamp(1.5rem, 3vw, 2.2rem);
+    --font-size-xl: clamp(2rem, 6vw, 4rem);
+
+    /* Espaciados */
+    --spacing-md: clamp(1.25rem, 3vw, 2rem);
+    --spacing-lg: clamp(2rem, 5vw, 4rem);
+    --spacing-xl: clamp(3rem, 8vw, 6rem);
+
+    --radius-lg: 20px;
+    --radius-full: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+    font-family: var(--font-family-base);
+    line-height: 1.6;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) 5%;
+}
+
+.logo img {
+    height: 40px; /* Ajusta según tu logo */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-text-main);
+    font-weight: 500;
+    font-size: var(--font-size-sm);
+}
+
+#hamburger {
+    display: none; /*-- Oculto en desktop--*/
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-lg) 5%;
+}
+
+.brand-name {
+    font-size: var(--font-size-xs);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--color-text-muted);
+}
+
+.hero h1 {
+    font-family: var(--font-family-titles);
+    font-size: var(--font-size-xl);
+    margin: 1rem 0;
+}
+
+.description {
+    max-width: 60ch;
+    margin-bottom: 2rem;
+}
+
+.button-hero {
+    display: inline-block;
+    background-color: var(--color-text-main); /* Botón verde oscuro */
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: var(--radius-full);
+    text-decoration: none;  /*Eliminamos el subrayado*/
+}
+
+.hero-image {
+    margin-top: var(--spacing-lg);
+    width: 100%;
+    max-width: 800px;
+}
+/*---FALTA PONER LA IMAGEN DE FONDO ---*/
+.hero-image img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+}
