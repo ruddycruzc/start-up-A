@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 :root {
@@ -32,15 +30,12 @@
   --spacing-xl: clamp(3rem, 8vw, 6rem);
 }
 
-
-
 body {
   background-color: var(--color-bg);
   color: var(--color-text-main);
   font-family: var(--font-family-base);
   line-height: 1.6;
 }
-
 
 .navbar {
   display: flex;
@@ -50,14 +45,13 @@ body {
 }
 
 .logo img {
-  height: 40px;
+  height: 30px;
+  vertical-align: middle;
   /* Ajusta según tu logo */
 }
 
 .nav-links {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
+  display: none;
 }
 
 .nav-links a {
@@ -68,16 +62,13 @@ body {
 }
 
 #hamburger {
-  display: none;
+  display: block;
   /*-- Oculto en desktop--*/
   background: none;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
 }
-
-
-
 
 .hero {
   display: flex;
@@ -87,14 +78,10 @@ body {
   padding: var(--spacing-lg) 5%;
   background-image: url("assets/productos.jpg");
   background-size: cover;
-
   background-position: center;
-
   background-repeat: no-repeat;
-
   width: 100%;
-
-  height: auto;
+  height: 600px;
 }
 
 .brand-name {
@@ -112,7 +99,8 @@ body {
 
 .description {
   max-width: 60ch;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  font-size: var(--font-size-sm);
 }
 
 .button-hero {
@@ -126,14 +114,28 @@ body {
   /*Eliminamos el subrayado*/
 }
 
-.hero-image {
-  margin-top: var(--spacing-lg);
-  width: 100%;
-  max-width: 800px;
+.button-primary {
+  background-color: #8c9376;
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.3s;
 }
 
+.button-primary a {
+  text-decoration: none;
+  font-weight: 100;
+  color: var(--color-bg);
+}
 
-
+#button-primary:hover {
+  background-color: #6b705c;
+  /* Oscurece un poco al pasar el ratón */
+}
 /* CSS DEL PUNTO 2 */
 
 /* Estilo general de TU sección */
@@ -204,27 +206,6 @@ body {
   border-radius: 10px;
 }
 
-
-.boton-lumea {
-  background-color: #8c9376;
-  color: white;
-  text-decoration: none;
-  padding: 12px 25px;
-  border-radius: 25px;
-  font-weight: bold;
-  display: inline-block;
-  transition: background 0.3s;
-}
-
-.boton-lumea:hover {
-  background-color: #6b705c;
-  /* Oscurece un poco al pasar el ratón */
-}
-
-
-
-
-
 /* =========================================
    1. DISEÑO POR DEFECTO (MÓVILES)
    ========================================= */
@@ -244,8 +225,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-
-
 
 @media (min-width: 768px) {
   .contenedor-tarjetas-lumea {
@@ -268,7 +247,6 @@ body {
   }
 }
 
-
 /* parte 3 ada: quin lo hace*/
 
 h2 {
@@ -280,12 +258,12 @@ h2 {
 
 h3 {
   font-size: var(--font-size-md);
-  font-weight: var(--font-weight-bold)
+  font-weight: var(--font-weight-bold);
 }
 
 .section-subtitle {
   text-align: center;
-  font-size: var(--font-size-md)
+  font-size: var(--font-size-md);
 }
 
 /* --- SECCIÓN SOBRE NOSOTROS --- */
@@ -346,7 +324,6 @@ h3 {
 /* Estilos de FORMULARIO*/
 
 #contacto {
-
   display: flex;
 
   flex-direction: column;
@@ -366,27 +343,21 @@ h3 {
   height: auto;
 
   padding: var(--spacing-md);
-
 }
 
 #contacto h2 {
-
   font-weight: 600;
 
   text-align: center;
-
 }
 
 #contacto p {
-
   text-align: center;
 
   width: 95%;
-
 }
 
 fieldset {
-
   display: flex;
 
   border: none;
@@ -396,25 +367,19 @@ fieldset {
   gap: var(--spacing-xs);
 
   width: 300px;
-
 }
 
 fieldset #nombre,
-
 fieldset #email,
-
 textarea {
-
   border: none;
 
   border-radius: 25px;
 
   padding: var(--spacing-sm);
-
 }
 
 textarea {
-
   border: none;
 
   border-radius: 20px;
@@ -422,25 +387,18 @@ textarea {
   padding: var(--spacing-sm);
 
   font-family: var(--font-family-base);
-
 }
 
 fieldset legend,
-
 fieldset label {
-
   display: none;
-
 }
 
 form {
-
   margin: var(--spacing-sm) 0;
-
 }
 
 fieldset button {
-
   border-radius: 25px;
 
   border: none;
@@ -456,73 +414,71 @@ fieldset button {
   cursor: pointer;
 
   /* transition: all 0.3s ease; */
-
 }
 
 fieldset button:hover {
-
   background-color: var(--color-brand-hover);
-
 }
 
 fieldset button:focus {
-
   outline: 2px solid var(--color-brand-hover);
 
   outline-offset: 2px;
 
   background-color: var(--color-brand-hover);
-
 }
 
 footer {
-
   color: var(--color-bg);
 
   background-color: var(--color-brand);
 
   padding: var(--spacing-sm) var(--spacing-md);
-
 }
 
 footer p {
-
   font-size: var(--font-size-sm);
 
   text-align: center;
-
 }
 
 @media (min-width: 1400px) {
+  .logo img {
+    height: 40px;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  #hamburger {
+    display: none;
+  }
+ .description{
+    font-size: var(--font-size-md);
+ }
+  .hero {
+    height: 800px;
+  }
 
   fieldset {
-
     width: 600px;
-
   }
 
   footer p {
-
     font-size: var(--font-size-md);
-
   }
 
   #contacto h2 {
-
     font-size: var(--font-size-lg);
-
   }
 
   #contacto p {
-
     font-size: var(--font-size-md);
-
   }
 
   fieldset button {
-
     padding: var(--spacing-sm) var(--spacing-md);
-
   }
-
 }

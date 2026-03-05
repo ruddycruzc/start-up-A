@@ -1,227 +1,238 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INARU Beauty | Cosmética Japonesa Ecológica</title>
+    <meta
+      name="description"
+      content="Cosmética ecológica inspirada en rituales japoneses."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        INARU Beauty | Cosmética Japonesa Ecológica
-    </title>
-    <meta name="description" content="Cosmética ecológica inspirada en rituales japoneses.">
-    <link rel="stylesheet" href="style.css">
-</head>
-
-
-
-<body>
-
+  <body>
     <header>
-        <nav class="navbar" aria-label="Navegación principal">
-            <a href="index.html" class="logo"><!--TENEMOS QUE PONER LA DIRECCION CORRECTA DE LA IMAGEN-->
-                <img src="assets/" alt="INARU Beauty">
-            </a>
+      <nav class="navbar" aria-label="Navegación principal">
+        <a href="index.html" class="logo"
+          ><!--TENEMOS QUE PONER LA DIRECCION CORRECTA DE LA IMAGEN-->
+          <img src="assets/Logo.png" alt="INARU Beauty" />
+        </a>
 
-            <!--BOTON HAMBURGUESA-->
-            <button type="button" id="hamburger" aria-label="Abrir menu" aria-controls="nav-list" aria-expanded="false">
+        <!--BOTON HAMBURGUESA-->
+        <button
+          type="button"
+          id="hamburger"
+          aria-label="Abrir menu"
+          aria-controls="nav-list"
+          aria-expanded="false"
+        >
+          ☰
+          <!--Los atributos aria hacen el menu accesible-->
+        </button>
 
-                ☰ <!--Los atributos aria hacen el menu accesible-->
-            </button>
-
-
-
-            <ul class="nav-links" id="nav-list">
-                <li>
-                    <a href="#inicio">Inicio</a> <!--"#" es porque no tenemos aun los enlaces creados-->
-                </li>
-                <li>
-                    <a href="#que-hacemos">¿Qué hacemos?</a>
-                </li>
-                <li>
-                    <a href="#sobre-nosotros">Sobre nosotros</a>
-                </li>
-                <li>
-                    <a href="#unete">Únete</a>
-                </li>
-
-
-            </ul>
-
-
-
-        </nav>
+        <ul class="nav-links" id="nav-list">
+          <li>
+            <a href="#inicio">Inicio</a>
+            <!--"#" es porque no tenemos aun los enlaces creados-->
+          </li>
+          <li>
+            <a href="#que-hacemos">¿Qué hacemos?</a>
+          </li>
+          <li>
+            <a href="#sobre-nosotros">Sobre nosotros</a>
+          </li>
+          <li>
+            <a href="#unete">Únete</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-
-
-
     <main>
-        <section class="hero" id="inicio">
+      <section class="hero" id="inicio">
+        <span class="brand-name">INARU</span>
 
-            <span class="brand-name">INARU</span>
+        <h1>Ritual japonés</h1>
 
-            <h1> Ritual japonés</h1>
+        <p class="description">
+          <!--Descripción de nuestro contenido-->
 
-            <p class="description"> <!--Descripción de nuestro contenido-->
+          En Inaru creamos cosmética ecológica inspirada en Japón, elaborada con
+          ingredientes naturales y rituales que cuidan tu piel y honran la
+          armonía del planeta.
+        </p>
 
-                En Inaru creamos cosmética ecológica inspirada en Japón, elaborada con ingredientes naturales y
-                rituales que cuidan tu piel y honran la armonía del planeta.
+        <button class="button-primary">
+          <a href="#unete">Descubrir más</a>
+        </button>
+      </section>
+
+      <section class="seccion-que-hacemos">
+        <h2 class="titulo-lumea">Elige LUMEA</h2>
+        <p class="subtitulo-lumea">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Necessitatibus corrupti animi
+        </p>
+
+        <div class="contenedor-beneficios-lumea">
+          <div class="tarjeta-lumea">
+            <img src="./assets/producto 1.jpg" alt="imagen-lumea" />
+            <h3>Ingredientes conscientes</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
+              esse ducimus tempore dolores laboriosam autem doloribus ex
+              asperiores, inventore neque laborum iusto obcaecati cum nam
+              consequatur. Provident iusto enim iure.
             </p>
+            <button class="button-primary">Ver nuestros principios</button>
+          </div>
 
-            <a href="#unete" class="button-hero">Descubrir más</a>
+          <div class="tarjeta-lumea">
+            <div class="icon-wrapper">
+              <div class="icon-box"><i class="fa-solid fa-recycle"></i></div>
+            </div>
+            <img src="./assets/grupo 2.jpg" alt="imagen-lumea" />
+            <h3>Sostenibilidad real</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo
+              libero officia perferendis sapiente accusamus, veniam deserunt
+              fugit debitis molestias omnis pariatur molestiae! Ut, tenetur
+              consequuntur neque at repudiandae eligendi consectetur!
+            </p>
+            <button class="button-primary">Conoce el ciclo de vida</button>
+          </div>
 
-        </section>
+          <div class="tarjeta-lumea">
+            <img src="./assets/grupo 3.jpg" alt="imagen-lumea" />
+            <h3>Inclusión total</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Temporibus eius quis dicta? Maiores, laborum. Quis maiores
+              excepturi dicta hic odit deleniti. Earum iusto fugiat voluptatibus
+              tempora libero reiciendis voluptatum! Alias.
+            </p>
+            <button class="button-primary">
+              Nuestra promesa de diversidad
+            </button>
+          </div>
+        </div>
+      </section>
+      <!---AQUI VA LA SECCION DE ADA-->
 
+      <section class="team-section">
+        <div class="team-container">
+          <h2 class="section-title">Sobre nosotros</h2>
+          <p class="section-subtitle">
+            Un equipo que combina tradición japonesa, ciencia y cuidado
+            auténtico.
+          </p>
 
-        <section class="seccion-que-hacemos">
-            <h2 class="titulo-lumea">Elige LUMEA</h2>
-            <p class="subtitulo-lumea">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus
-                corrupti animi</p>
-
-            <div class="contenedor-beneficios-lumea">
-
-                <div class="tarjeta-lumea">
-                    <img src="./assets/producto 1.jpg" alt="imagen-lumea">
-                    <h3>Ingredientes conscientes</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia esse ducimus tempore
-                        dolores
-                        laboriosam autem doloribus ex asperiores, inventore neque laborum iusto obcaecati cum nam
-                        consequatur.
-                        Provident iusto enim iure.
-                    </p>
-                    <a href="#" class="boton-lumea">Ver nuestros principios </a>
-                </div>
-
-                <div class="tarjeta-lumea">
-                    <div class="icon-wrapper">
-                        <div class="icon-box"><i class="fa-solid fa-recycle"></i></div>
-                    </div>
-                    <img src="./assets/grupo 2.jpg" alt="imagen-lumea">
-                    <h3>Sostenibilidad real</h3>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo libero officia perferendis
-                        sapiente
-                        accusamus, veniam deserunt fugit debitis molestias omnis pariatur molestiae! Ut, tenetur
-                        consequuntur
-                        neque at repudiandae eligendi consectetur!
-                    </p>
-                    <a href="#" class="boton-lumea">Conoce el ciclo de vida </a>
-                </div>
-
-                <div class="tarjeta-lumea">
-                    <img src="./assets/grupo 3.jpg" alt="imagen-lumea">
-                    <h3>Inclusión total</h3>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus eius quis dicta?
-                        Maiores, laborum.
-                        Quis maiores excepturi dicta hic odit deleniti. Earum iusto fugiat voluptatibus tempora
-                        libero
-                        reiciendis voluptatum! Alias.
-                    </p>
-                    <a href="#" class="boton-lumea">Nuestra promesa de diversidad </a>
-                </div>
-            
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="team-img-wrapper">
+                <img
+                  src="assets/freepik__coge-el-producto-de-envase-negro-y-ponlo-vertical-__66990 5.jpg"
+                  alt="Aiko Tanaka - Fundadora Especialista en rituales"
+                />
+              </div>
+              <div class="info">
+                <h3>Aiko Tanaka</h3>
+                <p class="role">Fundadora Especialista en rituales</p>
+              </div>
             </div>
 
-        </section>
-        <!---AQUI VA LA SECCION DE ADA-->
-
-        <section class="team-section">
-            <div class="team-container">
-                <h2 class="section-title">Sobre nosotros</h2>
-                <p class="section-subtitle">Un equipo que combina tradición japonesa, ciencia y cuidado auténtico.
+            <div class="team-card">
+              <div class="team-img-wrapper">
+                <img
+                  src="assets/freepik__coge-el-producto-de-envase-negro-y-ponlo-vertical-__66990 6.jpg"
+                  alt="Marina Lopez - Directora de Producto"
+                />
+              </div>
+              <div class="info">
+                <h3>Marina Lopez</h3>
+                <p class="role">
+                  Directora de Producto - Química cosmética natural
                 </p>
-
-                <div class="team-grid">
-
-                    <div class="team-card">
-                        <div class="team-img-wrapper">
-                            <img src="assets/freepik__coge-el-producto-de-envase-negro-y-ponlo-vertical-__66990 5.jpg"
-                                alt="Aiko Tanaka - Fundadora Especialista en rituales">
-                        </div>
-                        <div class="info">
-                            <h3>Aiko Tanaka</h3>
-                            <p class="role">Fundadora Especialista en rituales</p>
-                        </div>
-                    </div>
-
-                    <div class="team-card">
-                        <div class="team-img-wrapper">
-                            <img src="assets/freepik__coge-el-producto-de-envase-negro-y-ponlo-vertical-__66990 6.jpg"
-                                alt="Marina Lopez - Directora de Producto">
-                        </div>
-                        <div class="info">
-                            <h3>Marina Lopez</h3>
-                            <p class="role">Directora de Producto - Química cosmética natural</p>
-                        </div>
-                    </div>
-
-                    <div class="team-card">
-                        <div class="team-img-wrapper">
-                            <img src="assets/freepik__coge-el-producto-de-envase-negro-y-ponlo-vertical-__66990 7.jpg"
-                                alt="Dr. Kenji Sato - Asesor cientifico">
-                        </div>
-                        <div class="info">
-                            <h3>Dr. Kenji Sato</h3>
-                            <p class="role">Dr. Kenji Sato - Dermatólogo - Asesor científico</p>
-                        </div>
-                    </div>
-
-                </div>
+              </div>
             </div>
-        </section>
 
-        <!--AQUI VA LA SECCION DE KATY-->
+            <div class="team-card">
+              <div class="team-img-wrapper">
+                <img
+                  src="assets/freepik__coge-el-producto-de-envase-negro-y-ponlo-vertical-__66990 7.jpg"
+                  alt="Dr. Kenji Sato - Asesor cientifico"
+                />
+              </div>
+              <div class="info">
+                <h3>Dr. Kenji Sato</h3>
+                <p class="role">
+                  Dr. Kenji Sato - Dermatólogo - Asesor científico
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section id="contacto">
+      <!--AQUI VA LA SECCION DE KATY-->
 
-            <h2>Te unes?</h2>
+      <section id="contacto">
+        <h2>Te unes?</h2>
 
-            <p class="form-help">Forma parte de ritual y recibe contenido exclusivo</p>
+        <p class="form-help">
+          Forma parte de ritual y recibe contenido exclusivo
+        </p>
 
-            <form>
+        <form>
+          <fieldset>
+            <legend>Suscripción</legend>
 
-                <fieldset>
+            <label for="nombre">Nombre </label>
 
-                    <legend>Suscripción</legend>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              autocomplete="name"
+              placeholder="Nombre"
+            />
 
-                    <label for="nombre">Nombre </label>
+            <label for="email">Email</label>
 
-                    <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Nombre" />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              placeholder="Correo electrónico"
+            />
 
-                    <label for="email">Email</label>
+            <label for="mensaje">Mensaje</label>
 
-                    <input type="email" id="email" name="email" autocomplete="email" placeholder="Correo electrónico" />
+            <textarea
+              id="mensaje"
+              name="message"
+              rows="4"
+              placeholder="Escribe un mensaje..."
+            ></textarea>
 
-                    <label for="mensaje">Mensaje</label>
-
-                    <textarea id="mensaje" name="message" rows="4" placeholder="Escribe un mensaje..."></textarea>
-
-                    <button type="submit" aria-label="Enviar formulario de suscripción">
-
-                        Quiero unirme
-
-                    </button>
-
-                </fieldset>
-
-            </form>
-
-        </section>
-
-
-
-
-
+            <button
+              class="button-primary"
+              type="submit"
+              aria-label="Enviar formulario de suscripción"
+            >
+              Quiero unirme
+            </button>
+          </fieldset>
+        </form>
+      </section>
     </main>
 
     <footer class="footer-site">
-        <p> © 2026 INARU Beauty — Todos los derechos reservados</p>
+      <p>© 2026 INARU Beauty — Todos los derechos reservados</p>
     </footer>
 
     <script src="script.js"></script>
-
-
-</body>
-
+  </body>
 </html>
