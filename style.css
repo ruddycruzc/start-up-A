@@ -1,39 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
+  /* Colores principales */
   --color-brand: #848c6c;
   --color-brand-hover: #585e45;
-
   --color-bg: #fefefe;
   --color-bg-white: #ffffff;
   --color-text-main: #2a2a2a;
-  --color-text-muted: #9b9b9b;
 
+  /* Tipografía */
   --font-family-base: "Montserrat", sans-serif;
 
-  --font-size-xs: clamp(0.8rem, 1vw, 0.9rem);
+  /* Tamaños de fuente principales */
   --font-size-sm: clamp(0.9rem, 1.2vw, 1rem);
   --font-size-md: clamp(1rem, 1.8vw, 1.2rem);
   --font-size-lg: clamp(1.5rem, 3vw, 2.2rem);
   --font-size-xl: clamp(2rem, 6vw, 4rem);
 
-  --spacing-xs: clamp(0.5rem, 1vw, 0.75rem);
+  /* Espaciados principales */
   --spacing-sm: clamp(0.75rem, 1.5vw, 1rem);
   --spacing-md: clamp(1.25rem, 3vw, 2rem);
   --spacing-lg: clamp(2rem, 5vw, 4rem);
-  --spacing-xl: clamp(3rem, 8vw, 6rem);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family-base);
 }
 
 body {
   background-color: var(--color-bg);
   color: var(--color-text-main);
-  font-family: var(--font-family-base);
   line-height: 1.6;
 }
 
@@ -41,28 +39,32 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-md) 5%;
+  padding: 0.5rem;
+  background-color: white;
+  position: relative;
+  z-index: 100;
 }
 
 .logo img {
-  height: 30px;
-  vertical-align: middle;
-  /* Ajusta según tu logo */
+  height: 35px;
+
 }
 
-.nav-links {
-  display: none;
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
 }
 
-.nav-links a {
+.nav-list a {
   text-decoration: none;
   color: var(--color-text-main);
   font-weight: 500;
   font-size: var(--font-size-sm);
 }
 
-#hamburger {
-  display: block;
+#nav-toggle {
+  display: none;
   /*-- Oculto en desktop--*/
   background: none;
   border: none;
@@ -81,38 +83,27 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 600px;
+  min-height: 400px;
 }
 
 .brand-name {
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-md);
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: var(--color-text-muted);
+
 }
 
 .hero h1 {
-  font-family: var(--font-family-titles);
   font-size: var(--font-size-xl);
-  margin: 1rem 0;
+  margin-bottom: 1.5rem;
 }
 
 .description {
-  max-width: 60ch;
-  margin-bottom: 1rem;
-  font-size: var(--font-size-sm);
+  max-width: 600px;
+  margin-bottom: 15rem;
+  font-size: var(--font-size-md);
 }
 
-.button-hero {
-  display: inline-block;
-  background-color: var(--color-text-main);
-  /* Botón verde oscuro */
-  color: white;
-  padding: 1rem 2.5rem;
-  border-radius: var(--radius-full);
-  text-decoration: none;
-  /*Eliminamos el subrayado*/
-}
 
 .button-primary {
   background-color: #8c9376;
@@ -124,61 +115,58 @@ body {
   font-weight: bold;
   display: inline-block;
   transition: 0.3s;
+  margin-bottom: 1.75rem;
 }
 
-.button-primary a {
-  text-decoration: none;
-  font-weight: 100;
-  color: var(--color-bg);
-}
-
-#button-primary:hover {
+.button-primary:hover {
   background-color: #6b705c;
 
   /* Oscurece un poco al pasar el ratón */
 }
-#button-primary:focus {
+
+.button-primary:focus {
   outline: 2px solid var(--color-brand-hover);
   outline-offset: 2px;
   background-color: var(--color-brand-hover);
 }
-/* CSS DEL PUNTO 2 */
 
-/* Estilo general de TU sección */
+.nav-list.active {
+  display: flex;
+}
+
+
+/* ===SECCION ELIGE INARU===*/
+
+/* SECCION DE INES */
 .seccion-que-hacemos {
-  background-color: #fcfbf9;
-  padding: 60px 20px;
+  padding: 3rem;
+}
+
+.section,
+.section-subtitle {
+  padding: 2rem;
+
   text-align: center;
-  /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
 }
 
-/* Título de tu sección */
-.titulo-lumea {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 10px;
+.titulo-h2 {
+  text-align: center;
+  font-size: var(--font-size-lg);
 }
 
-/* Subtítulo de tu sección */
-.subtitulo-lumea {
-  color: #666;
-  max-width: 700px;
-  margin: 0 auto 40px auto;
-}
-
-/* EL CONTENEDOR GRID:  */
+/* TARJETAS  */
 .contenedor-beneficios-lumea {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  gap: var(--spacing-md);
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* LA TARJETA INDIVIDUAL */
+
 .tarjeta-lumea {
   background-color: var(--color-bg);
-  padding: 30px;
+  padding: var(--spacing-md);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   display: flex;
@@ -193,97 +181,25 @@ body {
   transform: translateY(-5px);
 }
 
-.tarjeta-lumea h3 {
-  margin-bottom: 15px;
-  color: #222;
-}
-
-.tarjeta-lumea p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 25px;
-}
-
-.imagen-lumea {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 25px auto;
+.tarjeta-lumea img {
+  width: 100%;
   border-radius: 10px;
-}
-
-/* =========================================
-   1. DISEÑO POR DEFECTO (MÓVILES)
-   ========================================= */
-
-.seccion-que-hacemos-lumea {
-  padding: 40px 15px;
-}
-
-.titulo-lumea {
-  font-size: 2rem;
-}
-
-.contenedor-tarjetas-lumea {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  .contenedor-tarjetas-lumea {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .seccion-que-hacemos-lumea {
-    padding: 80px 20px;
-  }
-
-  .titulo-lumea {
-    font-size: 2.8rem;
-  }
-
-  .contenedor-tarjetas-lumea {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* parte 3 ada: quin lo hace*/
-
-.titulo-h2 {
-  font-size: var(--font-size-lg);
-  font-weight: 600;
   margin-bottom: var(--spacing-md);
-  text-align: center;
 }
 
-h3 {
-  margin: var(--spacing-sm);
-  font-size: var(--font-size-md);
-  font-weight: 600;
-}
 
-.section-subtitle {
-  margin: var(--font-size-md);
-  text-align: center;
-  font-size: var(--font-size-md);
-}
 
 /* --- SECCIÓN SOBRE NOSOTROS --- */
+
+/*SECCION DE ADA*/
 
 .team-grid {
   display: grid;
   /* Esto los pone en 3 columnas iguales (una sola fila) */
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: var(--spacing-md);
   margin-top: var(--spacing-lg);
-  padding: 0 var(--spacing-md);
+  padding: 0 5%;
 }
 
 .team-card {
@@ -306,7 +222,7 @@ h3 {
   /* Hace el contenedor circular */
   overflow: hidden;
   /* Corta la imagen sobrante */
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: 15px;
 }
 
 .team-img-wrapper img {
@@ -315,30 +231,18 @@ h3 {
   object-fit: cover;
   /* Evita que la foto se estire */
 }
-.info {
-  display: flex;
-  flex-direction: column;
-}
-.info h3 {
-  text-align: center;
-}
+
+
 .role {
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
   text-align: center;
   color: var(--color-brand);
   font-weight: 500;
   margin-top: 5px;
 }
 
-/* Responsive: En móviles se ponen uno debajo de otro */
-@media (max-width: 768px) {
-  .team-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Estilos de FORMULARIO*/
-
+/* SECCION DE FORMULARIO*/
+/* SECCION DE KATY*/
 #contacto {
   display: flex;
   flex-direction: column;
@@ -362,7 +266,7 @@ fieldset {
   display: flex;
   border: none;
   flex-direction: column;
-  gap: var(--spacing-xs);
+  gap: var(--spacing-sm);
   width: 300px;
 }
 
@@ -400,49 +304,116 @@ footer p {
   font-size: var(--font-size-sm);
   text-align: center;
 }
+/*=====MEDIA QUERIES====*/
 
-@media (min-width: 1400px) {
-  .logo img {
-    height: 40px;
+
+/* ===== MÓVIL ===== */
+@media (max-width: 600px) {
+  /* Grids de secciones */
+  .team-grid,
+  .contenedor-beneficios-lumea {
+    grid-template-columns: 1fr;
   }
 
-  .nav-links {
+  /* Navbar: menú hamburguesa */
+  #nav-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: var(--color-bg-white);
+    padding: var(--spacing-md);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    
+  }
+
+  .nav-list.active {
     display: flex;
-    list-style: none;
-    gap: 2rem;
   }
-  #hamburger {
+}
+
+/* ===== TABLET ===== */
+@media (min-width: 601px) and (max-width: 1024px) {
+  /* Hero más grande */
+  .hero {
+    min-height: 400px;
+    padding: 7rem;
+  }
+
+  .hero h1 {
+    font-size: var(--font-size-xl);
+  }
+
+  .description {
+    font-size: 1.25rem;
+    max-width: 80%;
+    margin-bottom: 15rem;
+  }
+
+  /* Grids: dos columnas si hay espacio */
+  .team-grid,
+  .contenedor-beneficios-lumea {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  /* Navbar: mostramos los links horizontalmente */
+  #nav-toggle {
     display: none;
   }
-  .description {
-    font-size: var(--font-size-md);
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    padding: 0;
+    gap: 2rem;
   }
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 1025px) {
   .hero {
-    height: 800px;
-  }
-  .section-subtitle {
-    margin: var(--font-size-lg);
+    width: 100%;
+    padding: auto;
   }
 
-  .role {
-    font-size: var(--font-size-md);
-  }
-  fieldset {
-    width: 600px;
+  .hero h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem; /* grande y visible */
   }
 
-  fieldset button {
-    width: 40%;
-    align-self: flex-end;
+  .description {
+    font-size: 1.25rem;
+  margin-bottom: 4rem;
+
+   
   }
 
-  footer p {
-    font-size: var(--font-size-md);
+  /* Grids: tres columnas */
+  .team-grid,
+  .contenedor-beneficios-lumea {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
   }
-  #contacto p {
-    font-size: var(--font-size-md);
+
+  /* Navbar siempre horizontal */
+  #nav-toggle {
+    display: none;
   }
-  fieldset button {
-    padding: var(--spacing-sm) var(--spacing-md);
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    padding: 0;
   }
 }

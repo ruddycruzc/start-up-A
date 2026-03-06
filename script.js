@@ -1,9 +1,15 @@
-const hamburguer=document.querySelector("#hamburguer");  /*Estamos declarando la variable*/
-const navLinks= document.querySelector(".nav-links");
+const toggleButton = document.getElementById("nav-toggle");
+const navList = document.querySelector(".nav-list");
 
+toggleButton.addEventListener("click", () => {
+  navList.classList.toggle("active");
+  toggleButton.setAttribute("aria-expanded", navList.classList.contains("active"));
+});
 
-hamburguer.addEventListener("click",() =>{
-    navLinks.classList.toggle("active");
-    const isOpen=navLinks.classList.contains("active");
-    hamburger.innerHTML = isOpen ? '✕' : '☰';
+// Opcional: cerrar menú al hacer clic en un enlace
+document.querySelectorAll(".nav-list a").forEach(link => {
+  link.addEventListener("click", () => {
+    navList.classList.remove("active");
+    toggleButton.setAttribute("aria-expanded", false);
+  });
 });
